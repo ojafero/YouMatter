@@ -1,0 +1,13 @@
+.banner {
+  text-align: center;
+  margin: 25px;
+}
+.banner img {
+  max-height: 350px;
+  width: 90vw;
+}
+
+.badges__list {
+  display: flex;
+  flex-wrap: wrap;
+}
