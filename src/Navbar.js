@@ -5,13 +5,13 @@ import { Link } from "react-router-dom";
 function Navbar() {
   return (
     <header>
-      <div class="wrapper">
+      <div className="wrapper">
         <Link to="/home">
           <div class="logo">
             <h1>You Matter</h1>
           </div>
         </Link>
-        <ul class="nav-area">
+        <ul className="nav-area">
           <li>
             <Link to="/home">
               <a href="#">Home</a>

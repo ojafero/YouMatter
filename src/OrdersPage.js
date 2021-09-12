@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./Navbar";
 import "./OrdersPage.css";
+import { Link } from "react-router-dom";
 
 function OrdersPage() {
   return (
@@ -90,9 +91,11 @@ function OrdersPage() {
                 />
               </div>
             </div>
-            <div class="button">
-              <input type="submit" value="SUBMIT!" />
-            </div>
+            <Link to="/ThankYou">
+              <div class="button">
+                <input type="submit" value="SUBMIT!" />
+              </div>
+            </Link>
           </form>
         </div>
       </div>

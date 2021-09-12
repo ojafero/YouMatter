@@ -3,8 +3,21 @@ import React from "react";
 import BadgeItem from "./BadgeItem";
 import "./Badges.css";
 import Navbar from "./Navbar";
+import db from "./firebase";
+import { useState, useEffect } from "react";
 
 function Badges() {
+  const [badgesList, setBadgesList] = useState([]);
+
+  useEffect(() => {
+    db.collection("badges").onSnapshot((snapshot) => {
+      setBadgesList(snapshot.docs.map((doc) => doc.data()));
+    });
+
+    console.log("Effect called");
+  }, []);
+  console.log(badgesList);
+
   return (
     <div className="badgesPage">
       <Navbar />
@@ -16,18 +29,13 @@ function Badges() {
         <hr />
       </div>
       <div className="badges__list">
-        <BadgeItem />
-        <BadgeItem />
-        <BadgeItem />
-        <BadgeItem />
-        <BadgeItem />
-        <BadgeItem />
-        <BadgeItem />
-        <BadgeItem />
-        <BadgeItem />
-        <BadgeItem />
-        <BadgeItem />
-        <BadgeItem />
+        {badgesList.map((badge) => (
+          <BadgeItem badgeLabel={badge.badgeName} badgeImg={badge.badgeImg} />
+        ))}
+        <BadgeItem
+          badgeLabel="Cancer Badge"
+          badgeImg="https://firebasestorage.googleapis.com/v0/b/youmatter-6b781.appspot.com/o/Cancer_final.png?alt=media&token=de898121-2b6e-4d6e-8aad-af3d147665c7"
+        />
       </div>
     </div>
   );

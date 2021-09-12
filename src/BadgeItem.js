@@ -3,17 +3,15 @@ import React from "react";
 import "./BadgeItem.css";
 import { Link } from "react-router-dom";
 
-function BadgeItem() {
+function BadgeItem({ badgeLabel, badgeImg }) {
   return (
     <div className="badge__item">
       <Link to="/Orders">
         <div className="badge__image">
-          <img src="https://media.discordapp.net/attachments/885636389415313440/886304765565362257/tourette-pin.png" />
+          <img src={badgeImg} />
         </div>
       </Link>
-      <div className="badge__label">
-        <para>Badge Label</para>
-      </div>
+      <div className="badge__label">{badgeLabel}</div>
     </div>
   );
 }
