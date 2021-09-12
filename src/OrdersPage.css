@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+.container {
+  background-color: #fff;
+  padding: 40px 120px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+.container .title {
+  font-weight: 500;
+  font-size: 50px;
+  line-height: 52px;
+  text-align: center;
+  padding-top: 20px;
+}
+.container .subtitle {
+  font-weight: 100;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
+  padding: 15px;
+}
+.container .detailsa {
+  font-weight: 100;
+  font-size: 16px;
+  line-height: 30px;
+  position: left;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.content form .user-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+form .user-details .input-box {
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+form .input-box span.details {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.user-details .input-box input {
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid {
+  border-color: #9b59b6;
+}
+
+form input[type="radio"] {
+  display: none;
+}
+form .button {
+  height: 45px;
+  margin: 35px 0;
+  text-align: center;
+}
+form .button input {
+  height: 100%;
+  width: 30%;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #d087dc;
+}
+form .button input:hover {
+  /* transform: scale(0.99); */
+  background: linear-gradient(to right, #8e2de2, #4a00e0);
+}
+
+.content form .user-location {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+form .user-location .input-data {
+  margin-bottom: 15px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+form .input-data span.datalocal {
+  display: block;
+  font-weight: 500;
+  margin: 5px;
+}
+.user-location .input-data input {
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+.user-location .input-data input:focus,
+.user-location .input-data input:valid {
+  border-color: #9b59b6;
+}
+
+.content form .user-ubication {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+form .user-ubication .input-ub {
+  margin-bottom: 15px;
+  width: calc(100% / 3 - 20px);
+}
+form .input-box span.dataub {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.user-ubication .input-ub input {
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+.user-ubication .input-ub input:focus,
+.user-ubication .input-ub input:valid {
+  border-color: #9b59b6;
+}
+
+@media (max-width: 584px) {
+  .container {
+    max-width: 100%;
+  }
+  form .user-details .input-box {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  form .category {
+    width: 100%;
+  }
+  .content form .user-details {
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .user-details::-webkit-scrollbar {
+    width: 5px;
+  }
+}
+@media (max-width: 459px) {
+  .container .content .category {
+    flex-direction: column;
+  }
+}

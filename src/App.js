@@ -1,22 +1,19 @@
 import "./App.css";
 import Badges from "./Badges";
 import SplashPage from "./SplashPage";
-import { Route, BrowserRouter as Router, Switch, Link } from "react-router-dom";
+import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+import OrdersPage from "./OrdersPage";
 
 function App() {
   return (
     <div className="App">
-      {/* <Badges /> */}
       <Router>
         <Switch>
-          <Route path="/home" component={Badges} />
-          <Route path="/" component={SplashPage} />
+          <Route path="/Orders" exact component={OrdersPage} />
+          <Route path="/home" exact component={Badges} />
+          <Route path="/" exact component={SplashPage} />
         </Switch>
-        {/* <div className="App">
-        <Tasks />
-      </div> */}
       </Router>
-      {/* <SplashPage /> */}
     </div>
   );
 }
